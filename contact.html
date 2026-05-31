@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - AtasoyLabs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="logo.svg">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Atasoy<span>Labs</span>.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Über uns</a></li>
+                    <li><a href="products.html" class="nav-link">Produkte</a></li>
+                    <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary"
+                style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Starten</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 50px; background: var(--surface-color);">
+        <div class="container text-center">
+            <h1 style="font-size: 3rem;">Lassen Sie uns sprechen</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Haben Sie Fragen
+                oder eine Projektidee? Wir freuen uns auf Ihre Nachricht.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+        <div class="container">
+            <form class="contact-form" action="#" method="POST"> <!-- Placeholder action -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="Ihr Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" class="form-control" required
+                        placeholder="name@firma.de">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Thema</label>
+                    <select id="subject" name="subject" class="form-control">
+                        <option value="general">Allgemeine Anfrage</option>
+                        <option value="product">Produkt-Demo</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" class="form-control"
+                        placeholder="Wie können wir helfen?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Nachricht senden</button>
+            </form>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <p>Oder schreiben Sie uns direkt:</p>
+                <a href="mailto:hello@atasoylabs.com"
+                    style="color: var(--primary-color); font-weight: 500;">hello@atasoylabs.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>AtasoyLabs.</h3>
+                    <p style="color: #888; margin-top: 1rem;">Innovation durch Automation.</p>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="products.html">Produkte</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AtasoyLabs. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
