@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkte & Leistungen - AtasoyLabs</title>
+    <title>Painter AI - AtasoyLabs</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="logo.svg">
 </head>
-
 <body>
 
     <!-- Header -->
@@ -28,66 +26,198 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="section" style="padding-top: 150px; padding-bottom: 50px; background: var(--surface-color);">
-        <div class="container text-center">
-            <h1 style="font-size: 3rem;">Unsere Lösungen</h1>
-            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Maßgeschneiderte
-                Software und SaaS-Produkte für die Herausforderungen von heute.</p>
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 70vh; padding-top: 150px; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 4rem; margin-bottom: 1rem;"><span style="color: var(--primary-color);">Painter AI</span></h1>
+            <h2 style="font-size: 2rem; font-weight: 500; margin-bottom: 1.5rem;">Professionelle Vorab-Angebote aus einem Foto</h2>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 2.5rem auto;">
+                Erstellen Sie in wenigen Minuten eine erste Analyse, realistische Farbvisualisierung und ein professionelles Angebots-PDF – direkt aus einem Kundenfoto. Ideal für eine erste Einschätzung, bevor ein Vor-Ort-Termin notwendig wird.
+            </p>
+            <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Kostenlosen Testzugang anfragen</a>
         </div>
     </section>
 
-    <!-- Products Grid -->
+    <!-- Hero Image (Visualisierung) -->
+    <div class="container text-center" style="margin-top: -4rem; margin-bottom: 4rem; position: relative; z-index: 10;">
+        <img src="images/visualisierung.png" alt="Painter AI Visualisierung" style="border-radius: var(--radius-md); box-shadow: 0 20px 40px rgba(0,0,0,0.15); width: 100%; max-width: 1000px; margin: 0 auto; border: 4px solid #fff;">
+    </div>
+
+    <!-- Section 2: Von der Kundenanfrage zum Vorab-Angebot -->
+    <section class="section" style="background: var(--surface-color);">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Von der Kundenanfrage zum Vorab-Angebot</h2>
+                <p style="font-size: 1.2rem; color: var(--text-color); font-weight: 500; margin-bottom: 0.5rem;">Kunden schicken heute oft Fotos per WhatsApp oder E-Mail.</p>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">Mit Painter AI verwandeln Sie diese Fotos in eine professionelle Grundlage für die weitere Angebotserstellung.</p>
+            </div>
+            
+            <div class="grid">
+                <div class="card" style="background: #fff;">
+                    <div class="card-icon">🧠</div>
+                    <h3>Automatische Analyse</h3>
+                    <p>Laden Sie ein Foto hoch und erhalten Sie eine erste Einschätzung der Wandflächen und des Projekts.</p>
+                </div>
+                <div class="card" style="background: #fff;">
+                    <div class="card-icon">✨</div>
+                    <h3>Farbvisualisierung</h3>
+                    <p>Zeigen Sie Ihren Kunden verschiedene Farbvarianten direkt auf dem hochgeladenen Foto.</p>
+                </div>
+                <div class="card" style="background: #fff;">
+                    <div class="card-icon">📄</div>
+                    <h3>Professionelles PDF</h3>
+                    <p>Erstellen Sie standardisierte und professionell wirkende Vorab-Angebote für Ihre Kunden.</p>
+                </div>
+            </div>
+
+            <!-- PDF Image -->
+            <div class="text-center" style="margin-top: 4rem;">
+                <img src="images/pdf.png" alt="Painter AI PDF Angebot" style="border-radius: var(--radius-md); box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 100%; max-width: 800px; margin: 0 auto; border: 4px solid #fff;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Herausforderungen -->
     <section class="section">
         <div class="container">
+            <div class="text-center mb-lg">
+                <h2 style="font-size: 2.5rem;">Typische Probleme im Betrieb</h2>
+            </div>
+            
             <div class="grid">
-                <!-- Product 1 -->
-                <div class="card" style="padding: 3rem;">
-                    <div class="card-icon" style="font-size: 3rem;">🤖</div>
-                    <h2>Workflow AI Agent</h2>
-                    <p class="mb-md">Ein intelligenter Assistent, der Ihre E-Mails sortiert, Termine plant und
-                        Routineanfragen beantwortet. Vollständig integrierbar in Slack und Microsoft Teams.</p>
-                    <ul style="margin-bottom: 2rem; color: var(--text-muted);">
-                        <li>✓ 24/7 Verfügbarkeit</li>
-                        <li>✓ Lernt aus Ihren Interaktionen</li>
-                        <li>✓ DSGVO-konform</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-outline">Demo anfordern</a>
+                <div class="card" style="background: var(--surface-color); border-left: 4px solid var(--primary-color);">
+                    <h3 style="font-size: 1.2rem;">Kunden schicken Fotos</h3>
+                    <p style="color: var(--text-muted);">Erste Einschätzungen kosten Zeit und sind oft unstrukturiert.</p>
                 </div>
-
-                <!-- Product 2 -->
-                <div class="card" style="padding: 3rem;">
-                    <div class="card-icon" style="font-size: 3rem;">📊</div>
-                    <h2>Data Sync Hub</h2>
-                    <p class="mb-md">Verbinden Sie Ihre isolierten Datensilos. Unser Sync Hub sorgt dafür, dass Ihr CRM,
-                        Ihre Buchhaltung und Ihr Projektmanagement immer den gleichen Stand haben.</p>
-                    <ul style="margin-bottom: 2rem; color: var(--text-muted);">
-                        <li>✓ Echtzeit-Synchronisation</li>
-                        <li>✓ Fehler-Monitoring</li>
-                        <li>✓ Unterstützt 50+ Tools</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-outline">Mehr erfahren</a>
+                <div class="card" style="background: var(--surface-color); border-left: 4px solid var(--primary-color);">
+                    <h3 style="font-size: 1.2rem;">Nicht jede Anfrage rechtfertigt einen Vor-Ort-Termin</h3>
+                    <p style="color: var(--text-muted);">Eine erste Einschätzung anhand von Fotos spart Zeit.</p>
                 </div>
-
-                <!-- Product 3 -->
-                <div class="card" style="padding: 3rem;">
-                    <div class="card-icon" style="font-size: 3rem;">🚀</div>
-                    <h2>Atasoy Consulting</h2>
-                    <p class="mb-md">Kein klassisches Produkt, sondern unser Service für komplexe Anforderungen. Wir
-                        analysieren Ihre IT-Infrastruktur und entwickeln eine Roadmap zur Modernisierung.</p>
-                    <ul style="margin-bottom: 2rem; color: var(--text-muted);">
-                        <li>✓ Status-Quo Analyse</li>
-                        <li>✓ Technologie-Auswahl</li>
-                        <li>✓ Implementierungs-Support</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-outline">Beratung buchen</a>
+                <div class="card" style="background: var(--surface-color); border-left: 4px solid var(--primary-color);">
+                    <h3 style="font-size: 1.2rem;">Kunden möchten Farbvarianten sehen</h3>
+                    <p style="color: var(--text-muted);">Visualisierungen helfen bei Entscheidungen.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section 4: So funktioniert Painter AI -->
+    <section class="section" style="background: var(--surface-color);">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2 style="font-size: 2.5rem;">So funktioniert Painter AI</h2>
+            </div>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+                <div class="card" style="background: #fff; text-align: center; padding: 2rem;">
+                    <div style="width: 50px; height: 50px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1.5rem auto;">1</div>
+                    <h3 style="font-size: 1.2rem;">Foto hochladen</h3>
+                    <p style="color: var(--text-muted);">Laden Sie ein Kundenfoto hoch.</p>
+                </div>
+                <div class="card" style="background: #fff; text-align: center; padding: 2rem;">
+                    <div style="width: 50px; height: 50px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1.5rem auto;">2</div>
+                    <h3 style="font-size: 1.2rem;">Wunschfarbe auswählen</h3>
+                    <p style="color: var(--text-muted);">Wählen Sie die gewünschte Wandfarbe aus.</p>
+                </div>
+                <div class="card" style="background: #fff; text-align: center; padding: 2rem;">
+                    <div style="width: 50px; height: 50px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1.5rem auto;">3</div>
+                    <h3 style="font-size: 1.2rem;">Analyse & Visualisierung</h3>
+                    <p style="color: var(--text-muted);">Painter AI analysiert das Bild und erstellt die Farbvisualisierung.</p>
+                </div>
+                <div class="card" style="background: #fff; text-align: center; padding: 2rem;">
+                    <div style="width: 50px; height: 50px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1.5rem auto;">4</div>
+                    <h3 style="font-size: 1.2rem;">PDF erstellen</h3>
+                    <p style="color: var(--text-muted);">Erzeugen Sie ein professionelles Vorab-Angebots-PDF für Ihren Kunden.</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Image -->
+            <div class="text-center" style="margin-top: 4rem;">
+                <img src="images/dashboard.png" alt="Painter AI Dashboard" style="border-radius: var(--radius-md); box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 100%; max-width: 1000px; margin: 0 auto; border: 4px solid #fff;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5 & 6: Vorteile & Zielgruppe -->
+    <section class="section">
+        <div class="container">
+            <div class="grid" style="align-items: start;">
+                
+                <!-- Ihre Vorteile -->
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Ihre Vorteile</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Erste Projekte anhand von Kundenfotos einschätzen</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Weniger unnötige Besichtigungstermine</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Schnellere Bearbeitung von Kundenanfragen</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Professionelleres Auftreten gegenüber Kunden</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Einheitliche Angebotsunterlagen</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Farbvarianten direkt visualisieren</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Weniger manueller Aufwand</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem; line-height: 1.4;">✓</span>
+                            <span style="font-size: 1.1rem; line-height: 1.4;">Digitale Unterstützung für moderne Malerbetriebe</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Für wen ist Painter AI? -->
+                <div style="background: var(--surface-color); padding: 3rem; border-radius: var(--radius-md);">
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Für wen ist Painter AI?</h2>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-color);">Painter AI wurde entwickelt für:</p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.8rem; font-size: 1.1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--primary-color);">•</span> Malerbetriebe
+                        </li>
+                        <li style="margin-bottom: 0.8rem; font-size: 1.1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--primary-color);">•</span> Renovierungsfirmen
+                        </li>
+                        <li style="margin-bottom: 0.8rem; font-size: 1.1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--primary-color);">•</span> Innenausbau
+                        </li>
+                        <li style="margin-bottom: 0.8rem; font-size: 1.1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--primary-color);">•</span> Handwerksbetriebe mit Kundenberatung
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section text-center" style="background: var(--primary-color); color: #fff; margin-bottom: -var(--spacing-lg);">
+        <div class="container" style="padding: 4rem 0;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">Testen Sie Painter AI</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 1rem auto; opacity: 0.95;">Sie möchten Painter AI in Ihrem Betrieb testen oder Feedback geben?</p>
+            <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 2.5rem auto; opacity: 0.95;">Fordern Sie einen Testzugang an und erleben Sie den kompletten Workflow von Foto über Analyse und Visualisierung bis zum PDF.</p>
+            <a href="contact.html" class="btn" style="background: #fff; color: var(--primary-color); font-size: 1.1rem; padding: 1rem 2.5rem; transition: transform 0.2s;">PainterAI jetzt testen!</a>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="margin-top: var(--spacing-lg);">
         <div class="container">
             <div class="footer-grid">
                 <div>
@@ -119,5 +249,4 @@
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
