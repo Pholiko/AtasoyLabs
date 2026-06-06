@@ -43,4 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
+
+    // Mobile Menu Logic
+    const navContainer = document.querySelector('.nav-container');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (navContainer && navLinks) {
+        const toggleBtn = document.createElement('div');
+        toggleBtn.classList.add('mobile-toggle');
+        toggleBtn.innerHTML = '☰';
+        navContainer.appendChild(toggleBtn);
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            toggleBtn.innerHTML = navLinks.classList.contains('show') ? '✕' : '☰';
+        });
+    }
 });
