@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Megatel Witten - Ihr lokaler An- und Verkauf für Elektronik, Handys, Laptops und mehr. Fair, transparent und zuverlässig.">
+    <title>Megatel Witten | An- & Verkauf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo"><span>Mega</span>tel</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ankauf">Ankauf</a></li>
+                <li><a href="#verkauf">Verkauf</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Dein smarter An- & Verkauf in <span class="highlight">Witten</span></h1>
+                <p>Wir kaufen und verkaufen Elektronik: Smartphones, Laptops, Konsolen, Foto-Equipment und mehr. Faire Preise, direkte Auszahlung und kompetente Beratung.</p>
+                <div class="trust-badge" style="margin-bottom: 25px; display: inline-flex; align-items: center; gap: 8px; background: rgba(14, 165, 233, 0.1); padding: 8px 16px; border-radius: 20px; border: 1px solid rgba(14, 165, 233, 0.3);">
+                    <ion-icon name="shield-checkmark" style="color: var(--color-primary); font-size: 1.2rem;"></ion-icon>
+                    <span style="font-weight: 500; font-size: 0.95rem;">Seit 2003 in Witten</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Jetzt kostenlos anfragen</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card main-glass" id="dynamic-card">
+                    <div class="icon-ring"><ion-icon name="star-outline" id="dynamic-icon"></ion-icon></div>
+                    <h3 id="dynamic-title">Höchstpreise & Fairness</h3>
+                    <p id="dynamic-text">Sofortige, ehrliche Bewertung Ihrer Geräte vor Ort.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-glow"></div>
+    </header>
+
+    <section id="ankauf" class="section ankauf-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Was wir <span class="highlight">An- & Verkaufen</span></h2>
+                <p>Grundsätzlich kann <strong>alles</strong> angefragt werden! Wir kaufen die folgenden Artikel an und bieten sie je nach lokaler Verfügbarkeit auch direkt bei uns zum Verkauf an:</p>
+            </div>
+            <div class="grid cards-grid">
+                <div class="card product-card">
+                    <ion-icon name="phone-portrait"></ion-icon>
+                    <h3>Smartphones</h3>
+                    <p>Apple, Samsung, Xiaomi, Google und viele weitere Marken.</p>
+                </div>
+                <div class="card product-card">
+                    <ion-icon name="laptop"></ion-icon>
+                    <h3>Laptops & PCs</h3>
+                    <p>MacBooks, Windows Laptops, Gaming-PCs und Hardware.</p>
+                </div>
+                <div class="card product-card">
+                    <ion-icon name="game-controller"></ion-icon>
+                    <h3>Konsolen</h3>
+                    <p>PlayStation, Xbox, Nintendo Switch inkl. Spiele & Zubehör.</p>
+                </div>
+                <div class="card product-card">
+                    <ion-icon name="camera"></ion-icon>
+                    <h3>Foto & Video</h3>
+                    <p>Digitalkameras, Objektive und professionelles Equipment.</p>
+                </div>
+                <div class="card product-card">
+                    <ion-icon name="headset"></ion-icon>
+                    <h3>Audio & Musik</h3>
+                    <p>Kopfhörer, Lautsprecher, HiFi-Anlagen und Instrumente.</p>
+                </div>
+                <div class="card product-card">
+                    <ion-icon name="tv"></ion-icon>
+                    <h3>TV & Home</h3>
+                    <p>Smart TVs, Monitore und andere Unterhaltungselektronik.</p>
+                </div>
+            </div>
+            <div class="cta-banner mt-l">
+                <h3>Du hast etwas anderes?</h3>
+                <p>Kein Problem! Komm einfach vorbei oder kontaktiere uns. Wir schauen es uns an.</p>
+                <a href="#contact" class="btn btn-outline">Jetzt anfragen</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section services-section dark-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Unsere weiteren <span class="highlight">Services</span></h2>
+                <p>Mehr als nur An- und Verkauf. Wir sind Ihr Partner für Technik.</p>
+            </div>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-icon"><ion-icon name="build-outline"></ion-icon></div>
+                    <div class="service-text">
+                        <h3>Reparatur & Wartung</h3>
+                        <p>Professionelle Reparaturen vor allem für Handys (Displaybruch, Akku) und Laptops. Schnell und zuverlässig.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><ion-icon name="shield-half-outline"></ion-icon></div>
+                    <div class="service-text">
+                        <h3>Hüllen & Zubehör</h3>
+                        <p>Eine große Auswahl an Schutzhüllen, Ladekabeln, Panzerglas und weiterem Zubehör für gängige Modelle.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><ion-icon name="chatbubbles-outline"></ion-icon></div>
+                    <div class="service-text">
+                        <h3>Allgemeine Beratung</h3>
+                        <p>Sie sind unsicher, welches Gerät zu Ihnen passt? Wir beraten Sie kompetent, ehrlich und bedarfsgerecht.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Das sagen unsere <span class="highlight">Kunden</span></h2>
+                <p>Ihre Zufriedenheit ist unser größtes Anliegen.</p>
+                
+                <div class="google-rating-badge">
+                    <div class="google-logo">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <div class="rating-info">
+                        <span class="rating-score">4.8</span>
+                        <div class="rating-stars">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-half"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="rating-text">Basierend auf <strong>120+ Bewertungen</strong></div>
+                </div>
+            </div>
+            <div class="grid cards-grid">
+                <div class="card review-card">
+                    <div class="stars" style="margin-bottom: 15px;">
+                        <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                    <p class="review-text" style="font-style: italic; margin-bottom: 20px; flex-grow: 1;">"Super faire Preise und eine sehr ehrliche Beratung. Habe mein altes iPhone hier verkauft und das Geld sofort in bar bekommen. Sehr zu empfehlen!"</p>
+                    <div class="review-author-container">
+                        <div class="author-avatar avatar-1">M</div>
+                        <div>
+                            <p class="review-author" style="font-weight: 600; margin: 0;">Michael S.</p>
+                            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">Vor 2 Wochen</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card review-card">
+                    <div class="stars" style="margin-bottom: 15px;">
+                        <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                    <p class="review-text" style="font-style: italic; margin-bottom: 20px; flex-grow: 1;">"Bin schon seit Jahren Kunde. Der Inhaber ist super freundlich und repariert Laptops schnell und zuverlässig. Mein Retter in der Not!"</p>
+                    <div class="review-author-container">
+                        <div class="author-avatar avatar-2">S</div>
+                        <div>
+                            <p class="review-author" style="font-weight: 600; margin: 0;">Sabine K.</p>
+                            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">Vor 1 Monat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card review-card">
+                    <div class="stars" style="margin-bottom: 15px;">
+                        <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon>
+                    </div>
+                    <p class="review-text" style="font-style: italic; margin-bottom: 20px; flex-grow: 1;">"Gute Auswahl an gebrauchten Spielen und Handys. Man kann hier echte Schnäppchen machen und wird immer gut beraten."</p>
+                    <div class="review-author-container">
+                        <div class="author-avatar avatar-3">D</div>
+                        <div>
+                            <p class="review-author" style="font-weight: 600; margin: 0;">Dennis T.</p>
+                            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">Vor 3 Monaten</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section dark-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Besuchen Sie uns in <span class="highlight">Witten</span></h2>
+                    <p>Kommen Sie mit Ihren Geräten direkt vorbei für eine schnelle Einschätzung, oder kontaktieren Sie uns vorab.</p>
+                    
+                    <ul class="info-list">
+                        <li>
+                            <ion-icon name="location-outline"></ion-icon>
+                            <span>Ruhrstraße 1, 58452 Witten</span>
+                        </li>
+                        <li>
+                            <ion-icon name="call-outline"></ion-icon>
+                            <span>02302 / 1234567</span>
+                        </li>
+                        <li>
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>info@megatel-witten.de</span>
+                        </li>
+                        <li>
+                            <ion-icon name="time-outline"></ion-icon>
+                            <span>Mo-Fr: 10:00 - 18:00 Uhr<br>Sa: 10:00 - 15:00 Uhr</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="map-container" style="margin-top: 30px; border-radius: var(--border-radius-sm); overflow: hidden; height: 250px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Ruhrstraße%201,%2058452%20Witten&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form glass-panel">
+                        <h3>Schreiben Sie uns</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="E-Mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Was möchten Sie anbieten oder anfragen?" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3><span>Mega</span>tel</h3>
+                <p class="muted">Ihr zuverlässiger Partner für den An- und Verkauf von Elektronik in Witten.</p>
+                <p style="margin-top: 5px; font-weight: 500; color: #fbbf24;">Seit 2003 Ihr An- und Verkauf des Vertrauens!</p>
+            </div>
+            <div class="footer-links">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Folgen Sie uns</h4>
+                <div class="social-icons">
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.google.com/maps/place/Ruhrstr.+1,+58452+Witten" target="_blank" rel="noopener noreferrer" title="Wegbeschreibung auf Google Maps"><ion-icon name="logo-google"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Megatel Witten. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
