@@ -1,151 +1,194 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über uns - AtasoyLabs</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="logo.svg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .bg-grid {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+<body class="min-h-screen bg-[#fffdfa] bg-grid tracking-[-0.02em] font-inter text-gray-900 flex flex-col">
 
-<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between p-4 sm:p-5">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="text-gray-900 text-2xl font-bold tracking-tight">Atasoy<span class="text-[#c28b17]">Labs</span>.</a>
+      </div>
 
-    <!-- Header -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Atasoy<span>Labs</span>.</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">Über uns</a></li>
-                    <li><a href="products.html" class="nav-link">Painter AI</a></li>
-                    <li><a href="auditor.html" class="nav-link">Website Auditor</a></li>
-                    <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-                </ul>
-            </nav>
+      <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 bg-white/40 backdrop-blur-md border border-white/50 rounded-full px-2 py-2 items-center gap-1 shadow-sm z-50">
+        <a href="index.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Home</a>
+        <a href="about.html" class="text-gray-900 bg-black/5 px-4 py-1.5 rounded-full text-sm font-medium">Über uns</a>
+        <a href="products.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Painter AI</a>
+        <a href="auditor.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Website Auditor</a>
+        <a href="contact.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Kontakt</a>
+      </div>
 
-        </div>
-    </header>
+      <div class="hidden md:block w-24"></div>
+      
+      <div class="md:hidden">
+          <i data-lucide="menu" class="text-gray-900 w-6 h-6"></i>
+      </div>
+    </nav>
 
-    <!-- Page Header -->
-    <section class="section" style="padding-top: 150px; padding-bottom: 50px; background: var(--surface-color);">
-        <div class="container text-center">
-            <h1 style="font-size: 3rem;">Atasoy<span style="color: var(--primary-color);">Labs</span></h1>
-            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                Komplexe Welten. Verständliche Lösungen.
-            </p>
-        </div>
-    </section>
+    <!-- Main Content Wrapper to push footer down -->
+    <main class="flex-grow">
+        <!-- Page Header -->
+        <section class="pt-40 pb-20 px-6 sm:px-12 bg-transparent">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-gray-900">Atasoy<span class="text-[#c28b17]">Labs</span></h1>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                    Komplexe Welten. Verständliche Lösungen.
+                </p>
+            </div>
+        </section>
 
-    <!-- Content -->
-    <section class="section">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto;">
+        <!-- Content -->
+        <section class="py-20 px-6 sm:px-12 md:px-24 bg-transparent border-t border-gray-900/10">
+            <div class="max-w-4xl mx-auto">
 
-                <div class="mb-lg">
-                    <h2>Wer wir sind</h2>
-                    <p class="mb-md">
+                <div class="bg-white/60 backdrop-blur-md border border-gray-100 rounded-3xl p-8 sm:p-12 shadow-xl shadow-gray-200/20 mb-16">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Wer wir sind</h2>
+                    <p class="text-lg text-gray-600 mb-10 leading-relaxed">
                         AtasoyLabs wurde gegründet, um Abläufe in komplexen Arbeitswelten (Industrie, Handwerk, Medizin)
                         zu vereinfachen und zu automatisieren. Wir analysieren Abläufe, identifizieren Engpässe,
                         entwickeln digitale Lösungen für Branchen, in denen
                         präzise Entscheidungen und klare Abläufe entscheidend sind.
                     </p>
 
-                    <h2>Unser Anspruch</h2>
-                    <p class="mb-md">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Unser Anspruch</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                         Wir verbinden medizinisches Systemdenken, technisches Produktdesign und praxisnahe
                         Prozessoptimierung zu klar strukturierten Anwendungen im Arbeitsalltag.
                     </p>
-                    <p class="mb-lg">
+                    <p class="text-lg text-gray-600 leading-relaxed">
                         Unser Anspruch ist keine maximale Komplexität, sondern zuverlässige, schmale, praxistaugliche
                         Tools, die Mehrwert schaffen.
                     </p>
-
-                    <!-- Mission Highlight (Moved here) -->
-                    <div class="mission-card text-center mb-lg">
-                        <h3
-                            style="margin-bottom: 1rem; color: var(--primary-color); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px;">
-                            Unsere Mission</h3>
-                        <p style="font-size: 1.5rem; font-weight: 500; line-height: 1.4;">
-                            Technologie ist nur dann wertvoll, wenn sie Menschen eines zurückgibt: <span
-                                style="color: var(--text-color); font-weight: 700;">Zeit.</span><br>
-                            Für strategische, kreative Entscheidungen.
-                        </p>
-                    </div>
                 </div>
 
-                <div class="grid" style="grid-template-columns: 1fr; gap: 3rem; align-items: center;">
-                    <div>
-                        <h2>Der Founder</h2>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Arzt (MD) und Tech. Entrepreneur
-                        </h4>
-                        <p class="mb-md">
+                <!-- Mission Highlight -->
+                <div class="bg-gray-50 border-l-4 border-[#c28b17] p-8 sm:p-12 rounded-2xl mb-24 shadow-sm text-center">
+                    <h3 class="text-[#c28b17] font-bold tracking-widest uppercase text-sm mb-6 flex items-center justify-center gap-2">
+                        <i data-lucide="target" class="w-4 h-4"></i> Unsere Mission
+                    </h3>
+                    <p class="text-2xl md:text-3xl font-playfair font-medium leading-relaxed text-gray-800">
+                        Technologie ist nur dann wertvoll, wenn sie Menschen eines zurückgibt: <span class="text-gray-900 font-bold">Zeit.</span><br>
+                        Für strategische, kreative Entscheidungen.
+                    </p>
+                </div>
+
+                <!-- Founder & Values -->
+                <div class="mb-24">
+                    <div class="bg-white/60 backdrop-blur-md border border-gray-100 rounded-3xl p-8 sm:p-12 shadow-xl shadow-gray-200/20 mb-16">
+                        <h2 class="text-3xl font-bold mb-2 text-gray-900">Der Founder</h2>
+                        <h4 class="text-[#c28b17] text-lg font-medium mb-6">Arzt (MD) und Tech. Entrepreneur</h4>
+                        <p class="text-lg text-gray-600 leading-relaxed">
                             Er verbindet zwei Welten: Medizin für komplexe Systeme und technisches Know-how in
                             Softwareentwicklung und Workflow-Design. Aus der täglichen medizinischen Arbeit weiß er, wie
                             wichtig verlässliche
                             Prozesse sind. Dieses Verständnis prägt alle Produkte von AtasoyLabs.
                         </p>
-                        <br>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Unsere Werte</h3>
-                        <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-                            <div class="value-card">
-                                <h5>Klarheit</h5>
-                                <p>Komplexe Probleme verdienen einfache, belastbare Lösungen.</p>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-gray-900 mb-10 text-center">Unsere Werte</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg shadow-gray-200/20 hover:-translate-y-1 transition-transform text-center flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-4 text-[#c28b17]">
+                                <i data-lucide="sun" class="w-6 h-6"></i>
                             </div>
-                            <div class="value-card">
-                                <h5>Verantwortung</h5>
-                                <p>Präzision vor Spielereien, Zuverlässigkeit vor Hype</p>
+                            <h5 class="text-xl font-bold text-gray-900 mb-3">Klarheit</h5>
+                            <p class="text-gray-600">Komplexe Probleme verdienen einfache, belastbare Lösungen.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg shadow-gray-200/20 hover:-translate-y-1 transition-transform text-center flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-4 text-[#c28b17]">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
                             </div>
-                            <div class="value-card">
-                                <h5>Partnerschaft</h5>
-                                <p>Technische Exzellenz entsteht im Austausch, nicht im Elfenbeinturm.</p>
+                            <h5 class="text-xl font-bold text-gray-900 mb-3">Verantwortung</h5>
+                            <p class="text-gray-600">Präzision vor Spielereien, Zuverlässigkeit vor Hype.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg shadow-gray-200/20 hover:-translate-y-1 transition-transform text-center flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-4 text-[#c28b17]">
+                                <i data-lucide="handshake" class="w-6 h-6"></i>
                             </div>
-                            <div class="value-card">
-                                <h5>Fokus</h5>
-                                <p>Jede Funktion hat einen Zweck. Jedes Produkt ein eindeutiges Ziel.</p>
+                            <h5 class="text-xl font-bold text-gray-900 mb-3">Partnerschaft</h5>
+                            <p class="text-gray-600">Technische Exzellenz entsteht im Austausch, nicht im Elfenbeinturm.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg shadow-gray-200/20 hover:-translate-y-1 transition-transform text-center flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-4 text-[#c28b17]">
+                                <i data-lucide="crosshair" class="w-6 h-6"></i>
                             </div>
+                            <h5 class="text-xl font-bold text-gray-900 mb-3">Fokus</h5>
+                            <p class="text-gray-600">Jede Funktion hat einen Zweck. Jedes Produkt ein eindeutiges Ziel.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>AtasoyLabs.</h3>
-                    <p style="color: #888; margin-top: 1rem;">Wir befreien Unternehmen von manueller Routine.</p>
-                </div>
-                <div>
-                    <h4>Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Über uns</a></li>
-                        <li><a href="products.html">Painter AI</a></li>
-                        <li><a href="auditor.html">Website Auditor</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Rechtliches</h4>
-                    <ul class="footer-links">
-                        <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="datenschutz.html">Datenschutz</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AtasoyLabs. Alle Rechte vorbehalten.</p>
-            </div>
-        </div>
+    <!-- Dark Footer -->
+    <footer class="bg-[#232528] pt-24 pb-12 px-6 sm:px-12 md:px-24">
+      <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+              <div class="md:col-span-2">
+                  <h3 class="text-white text-2xl font-bold mb-4 tracking-tight">Atasoy<span class="text-[#c28b17]">Labs</span>.</h3>
+                  <p class="text-gray-400 text-[15px] max-w-sm leading-relaxed">
+                      Wir befreien Unternehmen von manueller Routine.<br>
+                      <span class="block mt-2 text-gray-500 font-medium">Komplexe Welten. Verständliche Lösungen.</span>
+                  </p>
+              </div>
+              <div>
+                  <h4 class="text-gray-300 font-semibold text-sm mb-6 uppercase tracking-wider">Links</h4>
+                  <ul class="flex flex-col gap-4 text-[15px] text-gray-300">
+                      <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                      <li><a href="about.html" class="hover:text-white transition-colors">Über uns</a></li>
+                      <li><a href="products.html" class="hover:text-white transition-colors">Painter AI</a></li>
+                      <li><a href="auditor.html" class="hover:text-white transition-colors">Website Auditor</a></li>
+                      <li><a href="contact.html" class="hover:text-white transition-colors">Kontakt</a></li>
+                  </ul>
+              </div>
+              <div>
+                  <h4 class="text-gray-300 font-semibold text-sm mb-6 uppercase tracking-wider">Rechtliches</h4>
+                  <ul class="flex flex-col gap-4 text-[15px] text-gray-300">
+                      <li><a href="impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                      <li><a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="pt-8 border-t border-gray-700/50 text-center text-sm text-gray-400">
+              <p>&copy; 2026 AtasoyLabs. Alle Rechte vorbehalten.</p>
+          </div>
+      </div>
     </footer>
-
-    <script src="js/script.js"></script>
+    
+    <script>
+      lucide.createIcons();
+    </script>
 </body>
-
 </html>
