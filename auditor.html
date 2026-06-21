@@ -10,6 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        @keyframes heroReveal { 0%{opacity:0;transform:translateY(28px);filter:blur(12px)} 100%{opacity:1;transform:translateY(0);filter:blur(0)} }
+        @keyframes heroFadeUp { 0%{opacity:0;transform:translateY(20px)} 100%{opacity:1;transform:translateY(0)} }
+        @keyframes heroZoom { 0%{transform:scale(1.12)} 100%{transform:scale(1)} }
+
+        .hero-anim { opacity:0; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(0.16,1,0.3,1); }
+        .hero-reveal { animation-name:heroReveal; animation-duration:1.1s; }
+        .hero-fade { animation-name:heroFadeUp; animation-duration:1s; }
+        .hero-zoom { animation:heroZoom 1.8s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+        @media (prefers-reduced-motion: reduce){ .hero-anim,.hero-zoom{ animation:none; opacity:1; } }
+
+        .bg-grid {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: {
@@ -25,7 +44,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen bg-[#fffdfa] tracking-[-0.02em] font-inter text-gray-900 flex flex-col">
+<body class="min-h-screen bg-[#fffdfa] bg-grid tracking-[-0.02em] font-inter text-gray-900 flex flex-col">
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between p-4 sm:p-5">
@@ -53,7 +72,7 @@
     <!-- Main Content Wrapper to push footer down -->
     <main class="flex-grow">
         <!-- Page Header -->
-        <section class="pt-40 pb-20 px-6 sm:px-12 bg-[#fffdfa]">
+        <section class="pt-40 pb-20 px-6 sm:px-12 bg-transparent">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-gray-900">Website <span class="text-[#c28b17]">Auditor</span></h1>
                 <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -63,7 +82,7 @@
         </section>
 
         <!-- Process Content -->
-        <section class="py-20 px-6 sm:px-12 md:px-24 bg-white border-y border-gray-900/10">
+        <section class="py-20 px-6 sm:px-12 md:px-24 bg-transparent border-y border-gray-900/10">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Unser 3-Schritte-Prozess</h2>
@@ -71,7 +90,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-                    <div class="bg-white/40 backdrop-blur-md border border-gray-100 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col">
+                    <div class="bg-white/40 backdrop-blur-md border border-gray-100 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col items-center text-center">
                         <div class="w-14 h-14 rounded-2xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-6 text-[#c28b17]">
                             <i data-lucide="search" class="w-6 h-6"></i>
                         </div>
@@ -80,7 +99,7 @@
                             Wir prüfen Ihre bestehende Website mithilfe modernster Tools. Sie erhalten von uns 2-3 konkrete Punkte, die Sie sofort verbessern können, um mehr Anfragen zu generieren.
                         </p>
                     </div>
-                    <div class="bg-white/40 backdrop-blur-md border border-gray-100 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col">
+                    <div class="bg-white/40 backdrop-blur-md border border-gray-100 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col items-center text-center">
                         <div class="w-14 h-14 rounded-2xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-6 text-[#c28b17]">
                             <i data-lucide="ruler" class="w-6 h-6"></i>
                         </div>
@@ -89,7 +108,7 @@
                             Bei Interesse erstellen wir ein tiefgehendes Audit als PDF und designen ein visuelles Mockup: Ein konkreter Entwurf, wie Ihre neue Website aussehen könnte.
                         </p>
                     </div>
-                    <div class="bg-white/40 backdrop-blur-md border border-gray-100 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col">
+                    <div class="bg-white/40 backdrop-blur-md border border-gray-100 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col items-center text-center">
                         <div class="w-14 h-14 rounded-2xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-6 text-[#c28b17]">
                             <i data-lucide="rocket" class="w-6 h-6"></i>
                         </div>
@@ -148,7 +167,7 @@
         </section>
 
         <!-- Audit Request Form -->
-        <section class="py-24 px-6 sm:px-12 bg-[#fffdfa]">
+        <section class="py-24 px-6 sm:px-12 bg-transparent">
             <div class="max-w-2xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-gray-200/50 border border-gray-100">
                 <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-gray-900">Jetzt kostenlose Kurzanalyse anfordern</h3>
                 <form class="space-y-6" action="https://formsubmit.co/contact@atasoylabs.com" method="POST">
