@@ -1,153 +1,250 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AtasoyLabs - Digitale Prozessoptimierung</title>
     <meta name="description" content="Schluss mit Excel-Chaos und manueller Dateneingabe. Wir digitalisieren und automatisieren die Zeitfresser in Ihrem Betrieb.">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="logo.svg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        @keyframes heroReveal { 0%{opacity:0;transform:translateY(28px);filter:blur(12px)} 100%{opacity:1;transform:translateY(0);filter:blur(0)} }
+        @keyframes heroFadeUp { 0%{opacity:0;transform:translateY(20px)} 100%{opacity:1;transform:translateY(0)} }
+        @keyframes heroZoom { 0%{transform:scale(1.12)} 100%{transform:scale(1)} }
+
+        .hero-anim { opacity:0; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(0.16,1,0.3,1); }
+        .hero-reveal { animation-name:heroReveal; animation-duration:1.1s; }
+        .hero-fade { animation-name:heroFadeUp; animation-duration:1s; }
+        .hero-zoom { animation:heroZoom 1.8s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+        @media (prefers-reduced-motion: reduce){ .hero-anim,.hero-zoom{ animation:none; opacity:1; } }
+      }
+    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+<body class="min-h-screen bg-white tracking-[-0.02em] font-inter">
 
-<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between p-4 sm:p-5">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="text-gray-900 text-2xl font-bold tracking-tight">Atasoy<span class="text-[#c28b17]">Labs</span>.</a>
+      </div>
 
-    <!-- Header -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Atasoy<span>Labs</span>.</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">Über uns</a></li>
-                    <li><a href="products.html" class="nav-link">Painter AI</a></li>
-                    <li><a href="auditor.html" class="nav-link">Website Auditor</a></li>
-                    <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-                </ul>
-            </nav>
+      <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 bg-white/40 backdrop-blur-md border border-white/50 rounded-full px-2 py-2 items-center gap-1 shadow-sm z-50">
+        <a href="index.html" class="text-gray-900 bg-black/5 px-4 py-1.5 rounded-full text-sm font-medium">Home</a>
+        <a href="about.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Über uns</a>
+        <a href="products.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Painter AI</a>
+        <a href="auditor.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Website Auditor</a>
+        <a href="contact.html" class="text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors px-4 py-1.5 rounded-full text-sm font-medium">Kontakt</a>
+      </div>
 
-        </div>
-    </header>
+      <div class="hidden md:block w-24">
+        <!-- Spacer for flex-between balance -->
+      </div>
+      
+      <div class="md:hidden">
+          <i data-lucide="menu" class="text-gray-900 w-6 h-6"></i>
+      </div>
+    </nav>
+
+    <!-- Fixed Background Video -->
+    <div class="fixed inset-0 w-full h-full z-0 pointer-events-none">
+      <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover hero-zoom grayscale sepia-[0.3] opacity-90">
+        <source src="15404923_1920_1080_60fps.mp4" type="video/mp4" />
+      </video>
+      <!-- Warm overlay to match the brand -->
+      <div class="absolute inset-0 bg-[#fffdfa]/20"></div>
+    </div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
-            <div class="hero-content" style="flex: 1; min-width: 300px; max-width: 600px;">
-                <h1>Prozesse fehlerfrei. <br><span style="color: var(--primary-color);">Komplett automatisiert.</span></h1>
-                <p>Schluss mit manueller Dateneingabe. Wir digitalisieren die Zeitfresser in Ihrem Betrieb durch maßgeschneiderte Software-Lösungen.</p>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Gespräch vereinbaren</a>
-                </div>
-            </div>
-            <div class="hero-image animate-on-scroll" style="flex: 1; min-width: 300px; text-align: center;">
-                <img src="images/hero-graphic.png" alt="KI Workflow Automation" style="max-width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
-            </div>
-        </div>
+    <section class="relative w-full bg-transparent z-10" style="height: 100dvh;">
+      
+      <!-- Headline - Fixed upper position, away from nav -->
+      <h1 class="absolute top-[20%] sm:top-[22%] left-0 w-full flex flex-col items-center text-center px-5 pointer-events-none z-50 text-gray-900 leading-[1.1]">
+        <span class="block font-bold text-4xl sm:text-6xl md:text-7xl tracking-tight hero-anim hero-reveal" style="animation-delay: 0.1s;">Prozesse fehlerfrei.</span>
+        <span class="block font-bold text-4xl sm:text-6xl md:text-7xl tracking-tight mt-1 sm:mt-2 hero-anim hero-reveal" style="animation-delay: 0.2s;">
+          Komplett <span class="text-[#c28b17]">automatisiert.</span>
+        </span>
+      </h1>
+
+      <!-- Subtext - Fixed lower position, below the waves -->
+      <div class="absolute bottom-[22%] sm:bottom-[25%] left-0 w-full flex justify-center px-5 hero-anim hero-fade z-50" style="animation-delay: 0.4s;">
+        <p class="max-w-2xl text-center text-base sm:text-xl text-gray-700 font-medium leading-relaxed">
+          Schluss mit <span class="text-[#c28b17]">manueller</span> Dateneingabe. Wir digitalisieren die Zeitfresser in Ihrem Betrieb durch maßgeschneiderte Software-Lösungen.
+        </p>
+      </div>
+
+      <!-- Button - Directly below subtext -->
+      <div class="absolute bottom-[10%] sm:bottom-[12%] left-0 w-full flex justify-center px-5 hero-anim hero-fade z-50 pointer-events-auto" style="animation-delay: 0.6s;">
+        <a href="contact.html" class="bg-[#c28b17] hover:bg-[#a67512] text-white text-base font-semibold px-8 py-4 rounded-full transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-[#c28b17]/20">
+          Gespräch vereinbaren
+        </a>
+      </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="section text-center" style="padding-top: 5rem; padding-bottom: 5rem; position: relative;">
-        <div class="container" style="position: relative; z-index: 1;">
-            
-            <div style="margin-bottom: 4rem;">
-                <p style="color: var(--primary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-bottom: 1rem;">Das unerkannte Problem</p>
-                <h2 style="font-size: 3rem; max-width: 800px; margin: 0 auto 1.5rem; line-height: 1.2;">Der eigentliche Engpass sind <span style="color: var(--primary-color);">manuelle</span> Prozesse.</h2>
-                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Unternehmen haben heute unzählige, teils extrem komplexe Abläufe. Zu vieles wird noch manuell abgetippt oder in fehleranfälligen Excellisten verwaltet.</p>
-            </div>
+    <!-- Subsection 1: Das unerkannte Problem -->
+    <section class="relative z-20 py-24 px-6 sm:px-12 md:px-24 bg-transparent border-b border-gray-900/10 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+              <p class="text-[#c28b17] font-bold uppercase tracking-wider text-sm mb-4">Das unerkannte Problem</p>
+              <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+                  Der eigentliche Engpass sind <span class="text-[#c28b17]">manuelle</span> Prozesse.
+              </h2>
+              <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                  Unternehmen haben heute unzählige, teils extrem komplexe Abläufe. Zu vieles wird noch manuell abgetippt oder in fehleranfälligen Excellisten verwaltet.
+              </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card 1 -->
+              <div class="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col items-center text-center">
+                  <div class="w-14 h-14 rounded-2xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-6 text-[#c28b17]">
+                      <i data-lucide="clock" class="w-6 h-6"></i>
+                  </div>
+                  <h3 class="text-[1.15rem] font-bold text-gray-900 mb-4 tracking-tight">Repetitive Aufgaben</h3>
+                  <p class="text-gray-500 leading-relaxed text-[15px]">
+                      Wertvolle Mitarbeiter verbringen Stunden mit Fleißarbeiten, Datenübertragung und Copy-Paste, anstatt echte Wertschöpfung zu betreiben.
+                  </p>
+              </div>
 
-            <div class="grid" style="text-align: left;">
-                <div class="card" style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.02);">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">⏳</div>
-                    <h3>Repetitive Aufgaben</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Wertvolle Mitarbeiter verbringen Stunden mit Fleißarbeiten, Datenübertragung und Copy-Paste, anstatt echte Wertschöpfung zu betreiben.</p>
-                </div>
-                <div class="card" style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.02);">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">📉</div>
-                    <h3>Reibungsverluste</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Komplexe Tools und unübersichtliche Prozesse verlangsamen das gesamte Team und führen zu unnötigen Fehlern in der Abwicklung.</p>
-                </div>
-                <div class="card" style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.02);">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">🧑‍🔧</div>
-                    <h3>Fachkräftemangel</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Es wird immer schwerer, qualifiziertes Personal zu finden. Wer seine aktuellen Leute mit Routineaufgaben blockiert, verliert Potenzial.</p>
-                </div>
-            </div>
-        </div>
+              <!-- Card 2 -->
+              <div class="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col items-center text-center">
+                  <div class="w-14 h-14 rounded-2xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-6 text-[#c28b17]">
+                      <i data-lucide="trending-down" class="w-6 h-6"></i>
+                  </div>
+                  <h3 class="text-[1.15rem] font-bold text-gray-900 mb-4 tracking-tight">Reibungsverluste</h3>
+                  <p class="text-gray-500 leading-relaxed text-[15px]">
+                      Komplexe Tools und unübersichtliche Prozesse verlangsamen das gesamte Team und führen zu unnötigen Fehlern in der Abwicklung.
+                  </p>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform flex flex-col items-center text-center">
+                  <div class="w-14 h-14 rounded-2xl bg-[#fdfaf3] border border-[#f5ead2] flex items-center justify-center mb-6 text-[#c28b17]">
+                      <i data-lucide="users" class="w-6 h-6"></i>
+                  </div>
+                  <h3 class="text-[1.15rem] font-bold text-gray-900 mb-4 tracking-tight">Fachkräftemangel</h3>
+                  <p class="text-gray-500 leading-relaxed text-[15px]">
+                      Es wird immer schwerer, qualifiziertes Personal zu finden. Wer seine aktuellen Leute mit Routineaufgaben blockiert, verliert Potenzial.
+                  </p>
+              </div>
+          </div>
+      </div>
     </section>
+    
+    <!-- Subsection 2: Warum AtasoyLabs? -->
+    <section class="relative z-20 py-24 px-6 sm:px-12 md:px-24 bg-transparent border-b border-gray-900/10 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+              <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900">Warum AtasoyLabs?</h2>
+              <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                  Einfache, schlanke Software. Moderne Unternehmen brauchen so wenig Reibung wie möglich, um maximale Effizienz zu erreichen. Wir bauen digitale Automatismen, die sich nahtlos in Ihren Alltag einfügen und die lästigen Fleißarbeiten übernehmen.
+              </p>
+          </div>
 
-    <!-- Features Section -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center mb-lg">
-                <h2 style="font-size: 2.5rem;">Warum AtasoyLabs?</h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">Einfache, schlanke Software. Moderne Unternehmen brauchen so wenig Reibung wie möglich, um maximale Effizienz zu erreichen. Wir bauen digitale Automatismen, die sich nahtlos in Ihren Alltag einfügen und die lästigen Fleißarbeiten übernehmen.</p>
-            </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Feature 1 -->
+              <div class="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform text-center flex flex-col items-center">
+                  <div class="w-14 h-14 rounded-full bg-white border border-gray-100 flex items-center justify-center mb-6 text-gray-900 shadow-sm">
+                      <i data-lucide="zap" class="w-6 h-6"></i>
+                  </div>
+                  <h3 class="text-[1.15rem] font-bold text-gray-900 mb-4 tracking-tight">Digitale Automatisierung</h3>
+                  <p class="text-gray-500 leading-relaxed text-[15px]">
+                      Reduzieren Sie fehleranfällige und manuelle Aufgaben durch zuverlässige Skripte und moderne Software-Schnittstellen.
+                  </p>
+              </div>
 
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Digitale Automatisierung</h3>
-                    <p>Reduzieren Sie fehleranfällige und manuelle Aufgaben durch zuverlässige Skripte und moderne Software-Schnittstellen.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔄</div>
-                    <h3>Flaschenhälse beseitigen</h3>
-                    <p>Wir analysieren Ihre bestehenden Prozesse und identifizieren Flaschenhälse für maximale
-                        Effizienz.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📈</div>
-                    <h3>Wächst mit Ihrem Unternehmen</h3>
-                    <p>Bauen Sie auf einer Infrastruktur, die mit Ihrem Unternehmen wächst. Zukunftssicher und robust.
-                    </p>
-                </div>
-            </div>
-        </div>
+              <!-- Feature 2 -->
+              <div class="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform text-center flex flex-col items-center">
+                  <div class="w-14 h-14 rounded-full bg-white border border-gray-100 flex items-center justify-center mb-6 text-gray-900 shadow-sm">
+                      <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                  </div>
+                  <h3 class="text-[1.15rem] font-bold text-gray-900 mb-4 tracking-tight">Flaschenhälse beseitigen</h3>
+                  <p class="text-gray-500 leading-relaxed text-[15px]">
+                      Wir analysieren Ihre bestehenden Prozesse und identifizieren Flaschenhälse für maximale Effizienz.
+                  </p>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl p-8 shadow-xl shadow-gray-200/20 hover:-translate-y-1 transition-transform text-center flex flex-col items-center">
+                  <div class="w-14 h-14 rounded-full bg-white border border-gray-100 flex items-center justify-center mb-6 text-gray-900 shadow-sm">
+                      <i data-lucide="trending-up" class="w-6 h-6"></i>
+                  </div>
+                  <h3 class="text-[1.15rem] font-bold text-gray-900 mb-4 tracking-tight">Skalierbare Infrastruktur</h3>
+                  <p class="text-gray-500 leading-relaxed text-[15px]">
+                      Bauen Sie auf einer Infrastruktur, die mit Ihrem Unternehmen wächst. Zukunftssicher und robust.
+                  </p>
+              </div>
+          </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section text-center">
-        <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Bereit für den nächsten Schritt?</h2>
-            <p class="mb-md">Lassen Sie uns gemeinsam herausfinden, wie wir Ihr Unternehmen voranbringen können.</p>
-            <a href="contact.html" class="btn btn-primary">Jetzt Kontakt aufnehmen</a>
-        </div>
+    <section class="relative z-20 py-24 px-6 sm:px-12 md:px-24 bg-[#fffdfa]">
+      <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900">Bereit für den nächsten Schritt?</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-10">
+              Lassen Sie uns gemeinsam herausfinden, wie wir Ihr Unternehmen voranbringen können.
+          </p>
+          <a href="contact.html" class="inline-block bg-[#c28b17] hover:bg-[#a67512] text-white text-base font-semibold px-8 py-4 rounded-full transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-[#c28b17]/20 mx-auto">
+              Jetzt Kontakt aufnehmen
+          </a>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>AtasoyLabs.</h3>
-                    <p style="color: #888; margin-top: 1rem;">Wir befreien Unternehmen von manueller Routine.</p>
-                </div>
-                <div>
-                    <h4>Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Über uns</a></li>
-                        <li><a href="products.html">Painter AI</a></li>
-                        <li><a href="auditor.html">Website Auditor</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Rechtliches</h4>
-                    <ul class="footer-links">
-                        <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="datenschutz.html">Datenschutz</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AtasoyLabs. Alle Rechte vorbehalten.</p>
-            </div>
-        </div>
+    <!-- Dark Footer -->
+    <footer class="relative z-20 bg-[#232528] pt-24 pb-12 px-6 sm:px-12 md:px-24">
+      <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+              <div class="md:col-span-2">
+                  <h3 class="text-white text-2xl font-bold mb-4 tracking-tight">Atasoy<span class="text-[#c28b17]">Labs</span>.</h3>
+                  <p class="text-gray-400 text-[15px] max-w-sm leading-relaxed">
+                      Wir befreien Unternehmen von manueller Routine.
+                  </p>
+              </div>
+              <div>
+                  <h4 class="text-gray-300 font-semibold text-sm mb-6 uppercase tracking-wider">Links</h4>
+                  <ul class="flex flex-col gap-4 text-[15px] text-gray-300">
+                      <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                      <li><a href="about.html" class="hover:text-white transition-colors">Über uns</a></li>
+                      <li><a href="products.html" class="hover:text-white transition-colors">Painter AI</a></li>
+                      <li><a href="auditor.html" class="hover:text-white transition-colors">Website Auditor</a></li>
+                      <li><a href="contact.html" class="hover:text-white transition-colors">Kontakt</a></li>
+                  </ul>
+              </div>
+              <div>
+                  <h4 class="text-gray-300 font-semibold text-sm mb-6 uppercase tracking-wider">Rechtliches</h4>
+                  <ul class="flex flex-col gap-4 text-[15px] text-gray-300">
+                      <li><a href="impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                      <li><a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="pt-8 border-t border-gray-700/50 text-center text-sm text-gray-400">
+              <p>&copy; 2026 AtasoyLabs. Alle Rechte vorbehalten.</p>
+          </div>
+      </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    
+    <script>
+      lucide.createIcons();
+    </script>
 </body>
-
 </html>
